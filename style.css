@@ -1,0 +1,213 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f0f0f5; /* Subtle gray background */
+    overflow-x: hidden;
+}
+
+/* Home Section */
+#home {
+    text-align: center;
+    background-image: url('天工.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#home h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+#home p {
+    font-size: 1.2rem;
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    opacity: 0;
+    animation: fadeIn 2.5s forwards;
+}
+
+/* Profile Photo Styling */
+.profile-photo {
+    width: 140px;
+    height: 160px;
+    border-radius: 50%;
+    display: block;
+    margin: 20px auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* About Me Section */
+#about {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#about h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s forwards;
+}
+
+#about p {
+    text-align: center;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+    background-color: #f0f0f5;
+}
+
+#projects h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s forwards;
+}
+
+#projects .project {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#projects .project h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+#projects .project p {
+    font-size: 1.1rem;
+}
+
+#projects .project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #5c6bc0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+#projects .project-link:hover {
+    background-color: #3949ab;
+    transform: translateY(-5px);
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+#contact h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideIn 1.5s forwards;
+}
+
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+#contact form label {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+#contact form input, #contact form textarea {
+    padding: 10px;
+    margin-top: 5px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact form button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #5c6bc0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#contact form button:hover {
+    background-color: #3949ab;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    #home h1 {
+        font-size: 2rem;
+    }
+
+    #home p {
+        font-size: 1rem;
+    }
+
+    #projects .project h3 {
+        font-size: 1.2rem;
+    }
+}
